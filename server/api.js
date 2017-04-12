@@ -32,12 +32,12 @@ api.get('/campus/:campusId', function (req, res, next) {
 });
 
 //Get all students
-api.get('/students', function (res, req, next) {
+api.get('/students', function (req, res, next) {
 	Student.findAll({
 		where: req.query
 	})
 		.then(function (students) {
-			res.statusCode(200).send("HI ME")
+			res.status(200).send("HI ME")
 		})
 		.catch(next);
 });
