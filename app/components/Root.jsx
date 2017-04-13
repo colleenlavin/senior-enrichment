@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 
 export default class WinterJokes extends Component {
   constructor() {
@@ -112,4 +112,4 @@ A: They're both below C level!`
     i % 2 === 0
     ? [...all, {q: row}]
     : [...all.slice(0, all.length - 1), Object.assign({a: row}, all[all.length - 1])],
-    [])
+    [])*/

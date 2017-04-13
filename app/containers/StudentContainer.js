@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 const mapStateToProps = (state, ownProps) => {
   return {
     selectedStudent: state.students.selected,
+    selectedCampus: state.students.campus,
     children: ownProps.children
   };
 };

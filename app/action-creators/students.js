@@ -6,7 +6,7 @@ export const receiveStudents = students => ({
   students
 });
 
-export const receiveStudent = (artist, albums, songs) => ({
+export const receiveStudent = (student, campus) => ({
   type: RECEIVE_STUDENT,
   student,
   campus

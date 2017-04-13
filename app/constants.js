@@ -1,5 +1,3 @@
-
-
 // Campuses
 export const RECEIVE_CAMPUSES = 'RECEIVE_CAMPUSES';
 export const RECEIVE_CAMPUS = 'RECEIVE_CAMPUS';
