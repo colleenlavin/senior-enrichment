@@ -5,5 +5,10 @@
 	// This works if we all use the same Sequelize instance (instantiated in and exported from `/db/index.js`)
 
 const User = require('./user')
+const Campus = require('./campus')
+const Student = require('./student')
 
-module.exports = {User}
+Student.belongsTo(Campus);
+Campus.hasMany(Student);
+
+module.exports = {Student, Campus}
