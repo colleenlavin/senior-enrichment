@@ -1,6 +1,6 @@
 import { RECEIVE_STUDENTS, RECEIVE_STUDENT } from '../constants';
 
-const initialCampusState = {
+const initialStudentState = {
 	selected: {},
 	list: []
 }
