@@ -4,7 +4,8 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router, Route, hashHistory, IndexRedirect, IndexRoute } from 'react-router';
 import store from './store'
-import Home from './components/Home'
+import Home from './components/home'
+import Root from './components/Root'
 // import App from './containers/CampusesContainer'
 import CampusesContainer from './containers/CampusesContainer'
 import CampusContainer from './containers/CampusContainer'
@@ -35,21 +36,11 @@ const onStudentEnter = function (nextRouterState) {
   store.dispatch(getStudentById(studentId));
 };
 
-// const onPlaylistEnter = function (nextRouterState) {
-//   const playlistId = nextRouterState.params.playlistId;
-//   store.dispatch(getPlaylistById(playlistId));
-//   store.dispatch(loadAllSongs());
-// };
-
-// const onStationsEnter = function (nextRouterState) {
-//   store.dispatch(loadAllSongs());
-// };
-
 export default function Main () {
   return(
   <Provider store={store}>
   
-      <Route path='/' component={Home} onEnter={onAppEnter} >
+      <Route path='/' component={Root} onEnter={onAppEnter} >
         <Route path='/campuses' component={CampusesContainer} />
         <Route path='/campuses/:campusId' component={CampusContainer} onEnter={onCampusEnter} />
         <Route path='/students' component={StudentsContainer} />
