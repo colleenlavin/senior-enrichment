@@ -11,6 +11,11 @@ module.exports = db.define('campus', {
   image: {
       type: Sequelize.JSON,
       allowNull: true
+  },
+   location:{
+      type: Sequelize.STRING,
+      allowNull: false
   }
+
 })
 
