@@ -2,7 +2,6 @@ import { RECEIVE_CAMPUSES, RECEIVE_CAMPUS } from '../constants';
 
 const initialCampusState = {
 	selected: {},
-	filteredStudents: [],
 	list: []
 }
 

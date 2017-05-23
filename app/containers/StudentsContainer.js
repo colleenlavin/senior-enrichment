@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Students from '../components/Students'
 import { selectStudent, deleteAStudent } from '../action-creators/students'
 import { getCampusById } from '../action-creators/campuses'
-
+    
 const mapStateToProps = (state) => {
 
   return {

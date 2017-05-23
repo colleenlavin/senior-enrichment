@@ -1,4 +1,4 @@
-import Campus from '../components/Campus';
+import Campus from '../components/campus';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
