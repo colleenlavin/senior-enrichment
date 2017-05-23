@@ -53,7 +53,7 @@ api.get('/students/:studentId', function (req, res, next) {
 		.catch(next);
 });
 
-//Post new campus
+//Create new campus
 api.post('/campus', function (req, res, next) {
 	Campus.create(req.body)
 		.then(campus => {
@@ -63,7 +63,7 @@ api.post('/campus', function (req, res, next) {
 		.catch(next);
 });
 
-//post new student
+//Create new student
 api.post('/students', function (req, res, next) {
 	Student.create(req.body)
 		.then(student => {
@@ -115,7 +115,7 @@ api.delete('/:campusId', (req, res, next) => {
 });
 
 //Delete a student
-api.delete('/:bookId', (req, res, next) => {
+api.delete('/:studentId', (req, res, next) => {
     Student.findById(req.params.studentId)
         .then(function (student) {
             return student.destroy()
@@ -123,5 +123,6 @@ api.delete('/:bookId', (req, res, next) => {
         .then(function () {
             res.send('The student no longer exists!')
         })
+		.catch(next)
 });
 module.exports = api
