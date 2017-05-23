@@ -6,7 +6,7 @@ import { Router, Route, hashHistory, IndexRedirect, IndexRoute } from 'react-rou
 import store from './store'
 import Home from './components/home'
 import Root from './components/Root'
-// import App from './containers/CampusesContainer'
+import App from './containers/CampusesContainer'
 import CampusesContainer from './containers/CampusesContainer'
 import CampusContainer from './containers/CampusContainer'
 import StudentContainer from './containers/StudentContainer'
@@ -36,10 +36,10 @@ const onStudentEnter = function (nextRouterState) {
   store.dispatch(getStudentById(studentId));
 };
 
-export default function Main () {
-  return(
-  <Provider store={store}>
-  
+export default function Main() {
+  return (
+    <Provider store={store}>
+
       <Route path='/' component={Root} onEnter={onAppEnter} >
         <Route path='/campuses' component={CampusesContainer} />
         <Route path='/campuses/:campusId' component={CampusContainer} onEnter={onCampusEnter} />
@@ -47,9 +47,9 @@ export default function Main () {
         <Route path='/students/:studentId' component={StudentContainer} onEnter={onStudentEnter} />
         <IndexRedirect to='/home' />
       </Route>
-    
-  </Provider>,
-  document.getElementById('main')
-)
+
+    </Provider> ,
+    document.getElementById('main')
+  )
 }
 
