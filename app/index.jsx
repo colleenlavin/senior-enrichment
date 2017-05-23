@@ -4,5 +4,5 @@ import Root from './routes';
 
 ReactDOM.render(
   <Root />,
-  document.getElementById('main')
+  document.getElementById('index')
 );

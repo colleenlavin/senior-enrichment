@@ -6,7 +6,6 @@ import { Router, Route, hashHistory, IndexRedirect, IndexRoute } from 'react-rou
 import store from './store'
 import Home from './components/home'
 import Root from './components/Root'
-import App from './containers/CampusesContainer'
 import CampusesContainer from './containers/CampusesContainer'
 import CampusContainer from './containers/CampusContainer'
 import StudentContainer from './containers/StudentContainer'
