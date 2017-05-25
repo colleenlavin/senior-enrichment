@@ -8,7 +8,7 @@ const Campus = (props) => {
   return (
     <div>
       <h1>{selectedCampus.name}</h1>
-        <Students students={props.students} campuses={props.campuses} selectedStudent={props.selectedStudent} />
+        <Students students={props.students} campuses={props.campuses} />
     </div>
   )
 }

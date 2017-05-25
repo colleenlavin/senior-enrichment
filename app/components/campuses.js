@@ -7,7 +7,7 @@ export default function Campuses (props) {
   return (
     <div>
       <h3>Campuses</h3>
-      <div key={campus.id} className="list-group">
+      <div key={campusId} className="list-group">
         {
           campuses.map(campus => {
             return (

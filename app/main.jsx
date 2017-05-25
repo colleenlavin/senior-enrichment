@@ -38,7 +38,7 @@ const onStudentEnter = function (nextRouterState) {
 export default function Main() {
   return (
     <Provider store={store}>
-
+    <Router >
       <Route path='/' component={Root} onEnter={onAppEnter} >
         <Route path='/campuses' component={CampusesContainer} />
         <Route path='/campuses/:campusId' component={CampusContainer} onEnter={onCampusEnter} />
@@ -46,7 +46,7 @@ export default function Main() {
         <Route path='/students/:studentId' component={StudentContainer} onEnter={onStudentEnter} />
         <IndexRedirect to='/home' />
       </Route>
-
+      </Router>
     </Provider> ,
     document.getElementById('main')
   )

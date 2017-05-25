@@ -9,10 +9,9 @@ export default function Student (props) {
     <div className="student">
       <div>
         <h3>{ student.name }</h3>
-        <img src={ student.imageUrl } className="img-thumbnail"/>
+        <img src={ student.image } className="img-thumbnail"/>
       </div>
-      {/*<SongsContainer songs={album.songs} />*/}
-      
+     
     </div>
   );
 }
