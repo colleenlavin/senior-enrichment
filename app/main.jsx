@@ -39,20 +39,20 @@ const onStudentEnter = function (nextRouterState) {
   store.dispatch(getStudentById(studentId));
 };
 
-export default function() {
+export default function Root() {
   return (
-    //Rethink your routing config
     <Provider store={store}>
-    <Router history={hashHistory}>
-      <Route path='/' component={Root} onEnter={onAppEnter} >
-        <Route path='/campuses' component={CampusesContainer} />
-        <Route path='/campuses/:campusId' component={CampusContainer} onEnter={onCampusEnter} />
-        <Route path='/students' component={StudentsContainer} />
-        <Route path='/students/:studentId' component={StudentContainer} onEnter={onStudentEnter} />
-      </Route>
-    </Router>  
-
-    </Provider> 
+      <Router history={ hashHistory }>
+      	<Route path='/' component={ AppContainer } onEnter={onAppEnter} >
+      		<Route path='/home' component={ Home } />
+      		<Route path='/campuses' component={ CampusesContainer } />
+      		<Route path='/campuses/:campusId' component={ CampusContainer } onEnter={onCampusEnter} />
+      		<Route path='/students' component={ StudentsContainer } />
+      		<Route path='/students/:studentId' component={ StudentContainer } onEnter={onStudentEnter} />
+      		<IndexRedirect to='/home' />
+      	</Route>
+      </Router>
+    </Provider>
   )
 }
 
