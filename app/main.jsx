@@ -3,14 +3,20 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { Router, Route, hashHistory, IndexRedirect, IndexRoute } from 'react-router';
+
+
 import store from './store'
 import axios from 'axios'
+
+
 import Home from './components/home'
 import Root from './components/Root'
+
 import CampusesContainer from './containers/CampusesContainer'
 import CampusContainer from './containers/CampusContainer'
 import StudentContainer from './containers/StudentContainer'
 import StudentsContainer from './containers/StudentsContainer'
+
 import { receiveCampuses } from './action-creators/campuses';
 import { receiveStudents } from './action-creators/students';
 
@@ -49,6 +55,7 @@ export default function Root() {
       		<Route path='/campuses/:campusId' component={ CampusContainer } onEnter={onCampusEnter} />
       		<Route path='/students' component={ StudentsContainer } />
       		<Route path='/students/:studentId' component={ StudentContainer } onEnter={onStudentEnter} />
+
       	</Route>
       </Router>
     </Provider>
