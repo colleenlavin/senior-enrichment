@@ -49,7 +49,6 @@ export default function Root() {
       		<Route path='/campuses/:campusId' component={ CampusContainer } onEnter={onCampusEnter} />
       		<Route path='/students' component={ StudentsContainer } />
       		<Route path='/students/:studentId' component={ StudentContainer } onEnter={onStudentEnter} />
-      		<IndexRedirect to='/home' />
       	</Route>
       </Router>
     </Provider>
